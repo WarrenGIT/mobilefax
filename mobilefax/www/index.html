@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<!-- meta details
+			WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323
+		-->
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- style sheets -->
+		<link rel="stylesheet" type="text/css" href="js/libs/jquery-mobile/jquery.mobile.min.css" />
+		<!-- NOT USED (yet)
+		<link rel="stylesheet" type="text/css" href="js/libs/jquery-mobile/jquery.mobile.structure.min.css" />
+		<link rel="stylesheet" type="text/css" href="js/libs/jquery-mobile/jquery.mobile.theme.min" /> 
+		-->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!-- page title -->
+        <title>Mobile Fax</title>
+    </head>
+	<body>
+		<!-- start: home page -->
+		<div data-theme="c" data-role="page" id="pg_home">
+			<!-- page header -->
+			<div data-theme="c" data-role="header" data-position="fixed">
+				<h2>Welcome to Mobile Fax</h2>
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#pg_home" data-transition="slide" data-theme="" data-icon="home" class="ui-btn-active ui-state-persist">Home</a>
+						</li>
+						<li>
+							<a href="#pg_login" data-transition="slide" data-theme="" data-icon="lock">Login</a>
+						</li>
+						<li>
+							<a href="#pg_signup" data-transition="slide" data-theme="" data-icon="arrow-r">Sign Up</a>
+						</li>
+						<li>
+							<a href="#pg_support" data-transition="slide" data-theme="" data-icon="info">Support</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- page content -->
+			<div data-theme="c" data-role="content">
+				<!-- logo -->
+				<div class="div_images">
+					<img src="./img/logo.png" border="0" />
+				</div>
+				<div id="ct_home">
+					<h3>Welcome to the <em>Mobile Fax</em> smart phone application.</h3>
+					<p><em>Fax2Email</em> is a free service that allows you to receive a fax directly to your registered email address as an attachment.</p>
+					<p>With this application, you will be able to sign up for a new <em>Fax2Email</em> number or login with your existing <em>Fax2Email</em> login details to manage your account.</p>
+					<p>If you are experiencing any problems with the application or would like some assistance, please navigate to the support section above and log a query.</p>
+				</div>
+			</div>
+			<!-- page footer -->
+			<div data-theme="c" data-role="footer" data-position="fixed">
+				<h2 class="system_footer"></h2>
+			</div>
+		</div>
+		<!-- end: home page -->
+
+		<!-- start: login page -->
+		<div data-theme="c" data-role="page" id="pg_login">
+			<!-- page header -->
+			<div data-theme="c" data-role="header" data-position="fixed">
+				<h2>System Login</h2>
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#pg_home" data-transition="slide" data-theme="" data-icon="home">Home</a>
+						</li>
+						<li>
+							<a href="#pg_login" data-transition="slide" data-theme="" data-icon="lock" class="ui-btn-active ui-state-persist">Login</a>
+						</li>
+						<li>
+							<a href="#pg_signup" data-transition="slide" data-theme="" data-icon="arrow-r">Sign Up</a>
+						</li>
+						<li>
+							<a href="#pg_support" data-transition="slide" data-theme="" data-icon="info">Support</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- page content -->
+			<div data-theme="c" data-role="content">
+				<!-- logo -->
+				<div class="div_images">
+					<img src="./img/logo.png" border="0" />
+				</div>
+				<!-- login container -->
+				<div id="ct_login">
+					<h3>Provide your login details below:</h3>
+					<div data-role="fieldcontain">
+						<label for="frm_login_usrname">Username:</label>
+						<input type="text" name="frm_login_usrname" id="frm_login_usrname" maxlength="25" />
+						<label for="frm_login_password">Password:</label>
+						<input type="password" name="frm_login_password" id="frm_login_password" maxlength="15" />
+					</div>
+					<!-- buttons grid -->
+					<fieldset class="ui-grid-a">
+						<div class="ui-block-a"><button data-theme="" id="frm_login_clear" data-icon="delete">Clear</button></div>
+						<div class="ui-block-b"><button data-theme="" id="frm_login_submit" data-icon="check">Login</button></div>
+					</fieldset>
+				</div>
+				<!-- feedback container for ajax form submission -->
+				<div id="frm_login_feedback" class="feedback_box"></div>
+			</div>
+			<!-- page footer -->
+			<div data-theme="c" data-role="footer" data-position="fixed">
+				<h2 class="system_footer"></h2>
+			</div>
+		</div>
+		<!-- end: login page -->
+
+		<!-- start: signup page -->
+		<div data-theme="c" data-role="page" id="pg_signup">
+			<!-- page header -->
+			<div data-theme="c" data-role="header" data-position="fixed">
+				<h2>User Sign Up</h2>
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#pg_home" data-transition="slide" data-theme="" data-icon="home">Home</a>
+						</li>
+						<li>
+							<a href="#pg_login" data-transition="slide" data-theme="" data-icon="lock">Login</a>
+						</li>
+						<li>
+							<a href="#pg_signup" data-transition="slide" data-theme="" data-icon="arrow-r" class="ui-btn-active ui-state-persist">Sign Up</a>
+						</li>
+						<li>
+							<a href="#pg_support" data-transition="slide" data-theme="" data-icon="info">Support</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- page content -->
+			<div data-theme="c" data-role="content">
+				<!-- logo -->
+				<div class="div_images">
+					<img src="./img/logo.png" border="0" />
+				</div>
+				<div id="ct_signup">
+					<h3>Provide your details below:</h3>
+					<div data-role="fieldcontain">
+						<label for="frm_signup_name">Full Name</label>
+						<input type="text" name="frm_signup_name" id="frm_signup_name" />
+						<label for="frm_signup_email">Email Address:</label>
+						<input type="text" name="frm_signup_email" id="frm_signup_email" />
+						<label for="frm_signup_confirm_email">Confirm Address:</label>
+						<input type="text" name="frm_signup_confirm_email" id="frm_signup_confirm_email" />
+						<label for="frm_signup_contact">Contact Number:</label>
+						<input type="text" name="frm_signup_contact" id="frm_signup_contact" />
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-type="horizontal">
+								<legend>Test Fax:</legend>
+									<input type="radio" name="testfax" id="testfax-a" value="yes"  />
+									<label for="testfax-a">Yes</label>
+									<input type="radio" name="testfax" id="testfax-b" value="no" checked="checked" />
+									<label for="testfax-b">No</label>
+							</fieldset>
+						</div>
+					</div>
+					<!-- buttons grid -->
+					<fieldset class="ui-grid-a">
+						<div class="ui-block-a"><button data-theme="" id="frm_signup_clear" data-icon="delete">Clear</button></div>
+						<div class="ui-block-b"><button data-theme="" id="frm_signup_submit" data-icon="check">Sign Up</button></div>
+					</fieldset>
+				</div>
+				<!-- feedback container for ajax form submission -->
+				<div id="frm_signup_feedback" class="feedback_box"></div>
+			</div>
+			<!-- page footer -->
+			<div data-theme="c" data-role="footer" data-position="fixed">
+				<h2 class="system_footer"></h2>
+			</div>
+		</div>
+		<!-- end: signup page -->
+
+		<!-- start: support page -->
+		<div data-theme="c" data-role="page" id="pg_support">
+			<!-- page header -->
+			<div data-theme="c" data-role="header" data-position="fixed">
+				<h2>Support</h2>
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#pg_home" data-transition="slide" data-theme="" data-icon="home">Home</a>
+						</li>
+						<li>
+							<a href="#pg_login" data-transition="slide" data-theme="" data-icon="lock">Login</a>
+						</li>
+						<li>
+							<a href="#pg_signup" data-transition="slide" data-theme="" data-icon="arrow-r">Sign Up</a>
+						</li>
+						<li>
+							<a href="#pg_support" data-transition="slide" data-theme="" data-icon="info" class="ui-btn-active ui-state-persist">Support</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- page content -->
+			<div data-theme="c" data-role="content">
+				<!-- logo -->
+				<div class="div_images">
+					<img src="./img/logo.png" border="0" />
+				</div>
+				<div id="ct_support">
+					<h3>Contact Support</h3>
+					<p>Please email our support department at <a href="#" title="email support" id="support_email"></a> and provide them with your registered fax number (if you are already a fax2email client) and your query.</p>
+					<p>You can also contact them directly on <span id="support_tel" class="spn_numeric"></span>.
+				</div>
+			</div>
+			<!-- page footer -->
+			<div data-theme="c" data-role="footer" data-position="fixed">
+				<h2 class="system_footer"></h2>
+			</div>
+		</div>
+		<!-- end: support page -->
+
+		<!-- javascript init -->
+		<script type="text/javascript" src="cordova.js"></script> <!-- SORT THIS OUT!!! -->
+		<script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-mobile/jquery.mobile.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-soap/jquery.soap.js"></script>
+		<script type="text/javascript" src="js/libs/xml-to-json/jquery.xml2json.js"></script>
+		<!-- <script type="text/javascript" src="js/libs/jquery-validate/jquery.validate.js"></script> NOT USED -->
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			// Wait for Cordova to load
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// Cordova is ready
+			function onDeviceReady() {
+				navigator.splashscreen.hide();
+			}
+
+			$( document ).on( "pageinit", function() {
+				$(".system_footer").html(system_footer);
+			});
+		</script>
+	</body>
+</html>

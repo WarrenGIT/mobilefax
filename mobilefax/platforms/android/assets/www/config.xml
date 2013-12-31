@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.coolappz.devmobile" version="1.0.2">
+    <name>devmobile</name>
+    <description>Cordova Mobile Sandbox Application</description>
+    <author email="info@com.coolappz" href="http://www.coolappz.com">Warren</author>
+    <access origin="*"/>
+    <preference name="fullscreen" value="true"/>
+    <preference name="webviewbounce" value="true"/>
+	<preference name="loadingDialog" value="Launching, Please wait..."/>
+	<content src="index.html" />
+</widget>

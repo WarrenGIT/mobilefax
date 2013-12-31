@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+		<!-- meta details
+			WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323
+		-->
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- style sheets -->
+		<link rel="stylesheet" type="text/css" href="js/libs/jquery-mobile/jquery.mobile.min.css" />
+		<!-- not needed so far...
+		<link rel="stylesheet" type="text/css" href="js/libs/jquery-mobile/jquery.mobile.structure.min.css" />
+		<link rel="stylesheet" type="text/css" href="js/libs/jquery-mobile/jquery.mobile.theme.min.css" />
+		-->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/calculator.css" />
+		<link rel="stylesheet" type="text/css" href="css/android.css" />
+		<!-- page title -->
+        <title>My Mobile Application</title>
+    </head>
+    <body>
+		<!-- page 1 (calculator) -->
+		<div data-role="page" id="page1">
+			<!-- page header -->
+			<div data-theme="b" data-role="header" data-position="fixed">
+				<h3>
+					Calculator
+				</h3>
+			</div>
+			<!-- page content -->
+			<div data-role="content">
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#page1" data-transition="slide" data-theme="" data-icon="bars" class="ui-btn-active ui-state-persist">
+								Calculator
+							</a>
+						</li>
+						<li>
+							<a href="#page2" data-transition="slide" data-theme="" data-icon="bars">
+								Android Logo
+							</a>
+						</li>
+						<li>
+							<a href="#page3" data-transition="slide" data-theme="" data-icon="bars">
+								Undefined 2
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- calculator application sourced from http://thecodeplayer.com/ -->
+				<div id="calculator">
+					<!-- screen and clear key -->
+					<div class="calc_top">
+						<span class="calc_clear">C</span>
+						<div class="calc_screen"></div>
+					</div>
+					<!-- operators and other keys -->
+					<div class="calc_keys">
+						<span>7</span>
+						<span>8</span>
+						<span>9</span>
+						<span class="calc_operator">+</span>
+						<span>4</span>
+						<span>5</span>
+						<span>6</span>
+						<span class="calc_operator">-</span>
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+						<span class="calc_operator">÷</span>
+						<span>0</span>
+						<span>.</span>
+						<span class="calc_eval">=</span>
+						<span class="calc_operator">x</span>
+					</div>
+				</div>
+			</div>
+			<!-- page footer -->
+			<div data-theme="b" data-role="footer" data-position="fixed">
+				<h2>
+					by WC v1.0
+				</h2>
+			</div>
+		</div>
+
+		<!-- page 2 android logo -->
+		<div data-role="page" id="page2">
+			<!-- page header -->
+			<div data-theme="b" data-role="header" data-position="fixed">
+				<h3>
+					Undefined 1
+				</h3>
+			</div>
+			<!-- page content -->
+			<div data-role="content">
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#page1" data-transition="slide" data-theme="" data-icon="bars">
+								Calculator
+							</a>
+						</li>
+						<li>
+							<a href="#page2" data-transition="slide" data-theme="" data-icon="bars" class="ui-btn-active ui-state-persist">
+								Android Logo
+							</a>
+						</li>
+						<li>
+							<a href="#page3" data-transition="slide" data-theme="" data-icon="bars">
+								Undefined 2
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- android active logo sourced from http://thecodeplayer.com/ -->
+				<div class="android">
+					<div class="android_head">
+						<div class="android_l_ant"></div>
+						<div class="android_r_ant"></div>
+						<div class="android_l_eye"></div>
+						<div class="android_r_eye"></div>
+					</div>
+					<div class="android_body">
+						<div class="android_l_arm"></div>
+						<div class="android_r_arm"></div>
+						<div class="android_l_leg"></div>
+						<div class="android_r_leg"></div>
+					</div>
+				</div>
+			</div>
+			<!-- page footer -->
+			<div data-theme="b" data-role="footer" data-position="fixed">
+				<h2>
+					by WC v1.0
+				</h2>
+			</div>
+		</div>
+
+		<!-- page 3 -->
+		<div data-role="page" id="page3">
+			<!-- page header -->
+			<div data-theme="b" data-role="header" data-position="fixed">
+				<h3>
+					Undefined 2
+				</h3>
+			</div>
+			<!-- page content -->
+			<div data-role="content">
+				<div data-role="navbar" data-iconpos="bottom">
+					<ul>
+						<li>
+							<a href="#page1" data-transition="slide" data-theme="" data-icon="bars">
+								Calculator
+							</a>
+						</li>
+						<li>
+							<a href="#page2" data-transition="slide" data-theme="" data-icon="bars">
+								Android Logo
+							</a>
+						</li>
+						<li>
+							<a href="#page3" data-transition="slide" data-theme="" data-icon="bars" class="ui-btn-active ui-state-persist">
+								Undefined 2
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				page 3
+			</div>
+			<!-- page footer -->
+			<div data-theme="b" data-role="footer" data-position="fixed">
+				<h2>
+					by WC v1.0
+				</h2>
+			</div>
+		</div>
+
+		<!-- javascript init -->
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-mobile/jquery.mobile.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/calculator.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			// Wait for Cordova to load
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// Cordova is ready
+			function onDeviceReady() {
+				navigator.splashscreen.hide();
+			}
+		</script>
+    </body>
+</html>

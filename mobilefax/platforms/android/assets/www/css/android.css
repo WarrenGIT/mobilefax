@@ -1,0 +1,101 @@
+.android_head, .android_body { background: #A4CA39; position: relative; }
+
+.android {
+  margin: 0; padding: 0;
+  height: 404px; width: 334px;
+  margin: 80px auto;
+}
+.android_head{
+	width: 220px;
+  height: 100px;
+	top: 32px;
+
+	border-radius: 110px 110px 0 0;
+	-moz-border-radius: 110px 110px 0 0;
+	-webkit-border-radius: 110px 110px 0 0;
+
+	-webkit-transition: all 0.1s ease-in;
+}
+.android_l_eye, .android_r_eye {
+	background: #fff;
+	width: 20px;
+  height: 20px;
+	position: absolute;
+  top: 42px;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.android_l_eye {left: 50px;}
+.android_r_eye {right: 50px;}
+
+.android_l_ant, .android_r_ant{
+	width: 6px; height: 50px;
+	position: absolute; top: -34px;
+  background: #A4CA39;
+
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.android_l_ant {
+	left: 50px;
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+}
+.android_r_ant {
+	right: 50px;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.android_body{
+	width: 220px; height: 184px;
+	top: 40px;
+
+	border-radius: 0 0 25px 25px;
+	-webkit-border-radius: 0 0 25px 25px;
+	-moz-border-radius: 0 0 25px 25px;
+}
+
+.android_l_arm, .android_r_arm, .android_l_leg, .android_r_leg {
+	width: 50px;
+  position: absolute;
+  background: #A4CA39;
+	-webkit-transition: all 0.1s ease-in;
+}
+.android_l_arm, .android_r_arm {
+	height: 150px;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+.android_l_leg, .android_r_leg {
+	height: 80px; top: 182px;
+	border-radius: 0 0 25px 25px;
+	-moz-border-radius: 0 0 25px 25px;
+	-webkit-border-radius: 0 0 25px 25px;
+}
+.android_l_arm {left: -58px;}
+.android_r_arm {right: -58px;}
+.android_l_leg {left: 45px;}
+.android_r_leg {right: 45px;}
+
+.android_head:hover {
+	-webkit-transform: rotate(-5deg) translate(-4px, -8px);
+	-transform: rotate(-5deg) translate(-4px, -8px);
+	-moz-transform: rotate(-5deg) translate(-4px, -8px);
+}
+.android_l_arm:hover{
+	-webkit-transform: rotate(15deg) translate(-14px, 0);
+	-transform: rotate(15deg) translate(-14px, 0);
+	-moz-transform: rotate(15deg) translate(-14px, 0);
+}
+.android_r_arm:hover{
+	-webkit-transform: rotate(-30deg) translate(30px, 0);
+	-transform: rotate(-30deg) translate(30px, 0);
+	-moz-transform: rotate(-30deg) translate(30px, 0);
+}
